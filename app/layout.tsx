@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="rounded-full h-4 w-4 bg-pokemon-green shadow-thick"></div>
         </div>
         <div className="p-4">
-          <main className="relative mx-auto border-solid border-[40px] border-pokemon-almond bg-pokemon-almond rounded-md rounded-bl-[30px] shadow-thick">
+          <main className="relative mx-auto max-h-[50vh] aspect-square border-solid border-[40px] border-pokemon-almond bg-pokemon-almond rounded-md rounded-bl-[30px] shadow-thick">
             <div className="bg-sky-200 p-2 rounded-md border-4 border-black overflow-y-auto overflow-x-hidden aspect-square max-h-[50vh]">
               {children}
             </div>
