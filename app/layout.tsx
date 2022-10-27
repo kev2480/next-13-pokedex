@@ -15,7 +15,7 @@ export default function RootLayout({
         <link rel="icon" href="/icons/icon-192x192.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className="bg-pokemon-red font-mono text-slate-800">
+      <body className="bg-pokemon-red font-mono text-slate-800 overflow-hidden">
         <div className="mx-auto max-w-[50vh] max-h-[25vh] w-full flex gap-6 mb-4 p-4 relative">
           <div className="rounded-full h-32 w-32  border-solid border-8 border-black overflow-clip">
             <div className="w-full h-full bg-pokemon-blue animate-pulse"></div>
