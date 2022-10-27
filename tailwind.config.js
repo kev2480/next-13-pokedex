@@ -9,9 +9,15 @@ module.exports = {
     extend: {
       colors: {
         'pokemon': {
-          red: '#DC0A2D',
-          almond: "#DEDEDE"
+          red: "#DC0A2D",
+          almond: "#DEDEDE",
+          blue: "#2BAAFD",
+          yellow: "#FFF27E",
+          green: "#51AD60"
         }
+      },
+      boxShadow: {
+        thick: '0 0 0 4px black'
       }
     }
   },

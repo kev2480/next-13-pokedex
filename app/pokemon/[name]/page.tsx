@@ -15,11 +15,11 @@ export default async function Page({ params, searchParams }: {
   return (
     <section>
       <Link href={`/${previousPage}`}>Back</Link>
-      <div className="flex gap-4">
-        <h2 className="capitalize">#{data.id} {data.name}</h2>
+      <div className="flex gap-4 justify-between">
+        <h2 className="uppercase font-bold text-3xl">#{data.id} {data.name}</h2>
         <h3 className="sr-only">Types</h3>
         <div>
-          <ul className="flex gap-2">
+          <ul className="flex gap-2 flex-wrap">
             {data.types.map(type =>
               <li key={type.type.name}>{type.type.name}</li>)
             }
@@ -27,24 +27,27 @@ export default async function Page({ params, searchParams }: {
         </div>
       </div>
 
-      <div className="relative w-full md:w-1/2 aspect-square mx-auto">
+      <div className="relative w-full md:w-1/2 aspect-square mx-auto mb-4">
         <Image alt={data.name} src={data.sprites.front_default} fill />
       </div>
 
       <h3 className="sr-only">Moves</h3>
-      <div>
-        <ul className="flex gap-2">
+      <details className="mb-4">
+        <summary>See all moves</summary>
+        <ul className="flex gap-2 flex-wrap">
           {data.moves.map(move =>
             <li key={move.move.name}>{move.move.name}</li>)
           }
         </ul>
-      </div>
+      </details>
 
       <h3 className="sr-only">Stats</h3>
-      <table>
+      <table className="mb-4 table-auto w-full">
         <thead>
-          <td>Stat</td>
-          <td>Value</td>
+          <tr className="text-left">
+            <th>Stat</th>
+            <th>Value</th>
+          </tr>
         </thead>
         <tbody>
           {data.stats.map(stat =>

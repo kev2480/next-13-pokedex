@@ -21,6 +21,11 @@ export const getPokemon = async (page?: number): Promise<PokemonResponse> => {
   const res = await axios.get(url);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
+  // await new Promise(resolve => {
+  //   setTimeout(() => {
+  //     resolve(undefined);
+  //   }, 20000);
+  // })
   return res.data;
 }
 
